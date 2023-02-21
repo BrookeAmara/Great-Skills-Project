@@ -66,4 +66,23 @@ section.about div ul {
     box-shadow: 0 0 10px #777;
 }
 h2 {font-size: 1rem;}
- 
+
+.assignments {
+    padding: 1rem 2%;
+}
+.assignments a {
+    display: block;
+    padding: .8rem;
+    margin-bottom: .5rem;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    border-radius: 7px;
+    color: #456;
+    text-decoration: none;
+
+}
+
+.assignments a:hover {
+    background-color: #ddd; 
+}
+
