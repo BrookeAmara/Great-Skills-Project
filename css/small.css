@@ -59,7 +59,7 @@ section.about div {
 
 }
 section.about div ul {
-    background-color: beige;
+    background-color: rgb(236, 190, 216);
     border-radius: 10px;
     padding: .5rem;
     list-style-position: inside;
