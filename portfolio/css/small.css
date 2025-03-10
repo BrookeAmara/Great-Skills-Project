@@ -4,3 +4,171 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+body{
+    font-family: 'Climate Crisis', cursive;
+    font-family: 'Montserrat', sans-serif;
+    --extralightweight: 200px;
+    --regularweight: 400px;
+}
+
+
+nav {
+    position: sticky;
+    top: 0px;
+    background-color: #F2EDD5;
+}
+nav ul{
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+nav a {
+    padding: .8rem .5rem;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: var(--extralightweight);
+}
+nav a:hover {
+    background-color: #BF2C47;
+    color: #F2EDD5;
+}
+
+
+
+section#about {
+    background-color: #F2EDD5;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#about h1 {
+    font-size: 2rem;
+    color: #BF2C47;
+    font-family: 'climate crisis';
+}
+section#about h2 {
+    font-size: 1rem;
+    color: black;
+    font-family: 'montserrat';
+}
+
+section#projects {
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    font-family: 'climate crisis';
+    color:#F2EDD5
+}
+
+section#projects {
+    background-color: #D9857E;
+    min-height: 100vh;
+    padding: 50px;
+    
+}
+
+figure {
+    position: relative;
+    text-align: center;
+  }
+  
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    color: #F2EDD5;
+    font-family: 'montserrat';
+    width: 100%;
+    /*background-color: rgba(255, 255, 255, 0.8); /* add a semi-transparent white background */
+    padding: 10px;
+  }
+  
+  figure:hover {
+    background-color: #BF2C47;
+    color: #F2EDD5;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+     border-radius: 10px 10px 10px 10px;
+      }
+      
+      
+div.theParent{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.theParent a {
+    flex-basis: 100%;
+    padding: 1rem 2vw;
+}
+
+section#projects h1 {
+    font-size: 2rem;
+    color: #BF2C47;
+    font-family: 'climate crisis';
+}
+
+section#projects figure {
+margin: 0;
+width: 100%;
+}
+
+section#projects image {
+    width: 100%;
+    }
+
+section#contact {
+    background-color: #BF2C47;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#contact h1{
+    color: #F2EDD5;
+    font-family: "climate crisis";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section#contact ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+section#contact li {
+    list-style-type: none;
+}
+
+section#contact a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2EDD5;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+            
+}
+
+section#contact a img{
+    height: 50px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    fill: #F2EDD5;
+}
+
+section#contact a:hover{
+    text-decoration: underline;
+    transform: translateY(10px);
+}
