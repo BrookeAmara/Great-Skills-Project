@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/image/blackjack);
+    background-image: url(/blackjack/image/blackjack.jpg);
     background-size: cover;
     background-position: center;
 }
