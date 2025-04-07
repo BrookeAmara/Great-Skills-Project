@@ -31,6 +31,9 @@ p {
 }
 body {
     font-family: 'Kanit', sans-serif;
+    background-image: url(/posters/images/stars.jpg);
+    background-size: cover;
+    background-position: center;
 }
 #grid {
     position:absolute; top:15px;
