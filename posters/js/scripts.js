@@ -1,4 +1,4 @@
-import { films } from '../films.js'
+import { films } from "../data/films.js"
 console.log(films)
 
 const pathStart = "https://starwars-visualguide.com/assets/img/films/"
