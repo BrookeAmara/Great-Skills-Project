@@ -29,6 +29,8 @@ for (let x = 0; x < films.length; x++) {
    const btnList = document.querySelector("#list")
    const btnGrid = document.querySelector("#grid")
    const pageBody = document.querySelector("body")
+   const btnRed = document.querySelector("redimage")
+   const btnGreen = document.querySelector("greenimage")
    
 
    btnGrid.addEventListener('click' , () => pageBody.className= "list")

@@ -36,9 +36,10 @@ body {
     background-position: center;
 }
 #grid {
-    position:absolute; top:15px; left: 15px
+    position:absolute; top:15px; left: 20px
     background-color: #232323;
     border-radius: 7px;} /*grid icon on left*/ 
+
 
 main.grid{ max-width: fit-content;}/*unsure what to do here*/
 
