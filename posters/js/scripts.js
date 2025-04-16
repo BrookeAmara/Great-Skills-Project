@@ -1,7 +1,7 @@
-import { films } from "../data/films.js"
+import { films } from '../films.js'
 console.log(films)
 
-const pathStart = "https://starwars-visualguide.com/assets/img/films/"
+const pathStart = "https://starwars.dgmuvu.com/films/1.webp"
 const myTarget = document.querySelector(".list");
 for (let x = 0; x < films.length; x++) {
    let barDiv= document.createElement('div')
@@ -29,12 +29,15 @@ for (let x = 0; x < films.length; x++) {
    const btnList = document.querySelector("#list")
    const btnGrid = document.querySelector("#grid")
    const pageBody = document.querySelector("body")
-   const btnRed = document.querySelector("redimage")
-   const btnGreen = document.querySelector("greenimage")
    
 
    btnGrid.addEventListener('click' , () => pageBody.className= "list")
    btnList.addEventListener('click' , () => pageBody.className= "grid")
+
+
+
+
+  
 
 
 
