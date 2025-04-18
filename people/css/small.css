@@ -51,10 +51,21 @@ nav button {
     color: #009;
 }
 
-#peopleHere figure.female {
-    border: #900 1px solid;
-    color: #900;
+#peopleHere figure.female figcaption{
+    border: solid 4px pink;
+
 }
+
+#peopleHere figure.male figcaption{
+    border: solid 4px red;
+}
+
+#peopleHere figure.other figcaption{
+    border: solid 4px blue;
+}
+
+
+
 
 #peopleHere figure img {
     width: 100%;
