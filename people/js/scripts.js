@@ -1,64 +1,66 @@
-import { people } from "../people.js";
 
-const filterButtons = document.querySelector(".filterButtons");
-const characterDiv = document.querySelector(".characterDiv");
-const displayText = document.querySelector(".displayText");
+import{ people } from '../data/people.js'
+console.log(people)
 
-const allCharsButton = createFilterButton("All Characters", "all");
-const maleCharsButton = createFilterButton("Male Characters", "male");
-const femaleCharsButton = createFilterButton("Female Characters", "female");
-const otherCharsButton = createFilterButton("Other Characters", "other");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css">
+  <link rel="stylesheet" href="css/large.css">
+  <title>Star Wars Characters</title>
+</head>
+<body>
+  <header>
+    <div class="introText">
+      <h1>Star Wars Characters</h1>
+      <p>Click the buttons to filter as you please.</p>
+    </div>
+    <div class="filterButtons"></div>
+  </header>
+  <main>
+    <div class="characterDiv"></div>
+  </main>
+  <script src="js/scripts.js" type="module"></script>
+</body>
+</html>
 
-filterButtons.appendChild(allCharsButton);
-filterButtons.appendChild(maleCharsButton);
-filterButtons.appendChild(femaleCharsButton);
-filterButtons.appendChild(otherCharsButton);
 
-function createFilterButton(text, filterValue) {
-  const button = document.createElement("button");
-  button.textContent = text;
-  button.addEventListener("click", function () {
-    if (filterValue != "all"){
-      const filteredChars = filterCharacters(filterValue);
-      populateDOM(filteredChars);
-    }else{
-      populateDOM(people);
-    }
-  });
-  return button;
-}
+const myNavigation = document.querySelector('nav')
+const myParent = document.querySelector('#peopleHere')
 
-function filterCharacters(filterValue) {
-  if (filterValue === "other") {
-    return people.filter((person) => person.gender !== "male" && person.gender !== "female");
-  } else {
-    return people.filter((person) => person.gender === filterValue);
+function displayPeople (x) {
+
+  x.forEach(person => {
+    const myFigure = document.createElement('figure')
+
+
+    const myImage = document.createElement('img')
+   //console.log(person.url)
+   const explodedArray = person.url.split('/')
+   //console.log(explodedArray)
+   const charNumber = explodedArray[5]
+   myImage.src='https://starwars.dgmuvu.com/characters/${charNumber}.jpg'
+    myImage.alt = person.name
+
+
+    const myCaption = document.createElement('figcaption')
+    myCaption.textContent = person.name
+
+
+    myFigure.appendChild(myImage)
+    myFigure.appendChild(myCaption)
+
+
+    myParent.appendChild
+
   }
+
+  )
 }
 
-function populateDOM(characters) {
-  characterDiv.innerHTML = "";
-  if (characters.length === 0) {
-    displayText.textContent = "No matching characters found.";
-  } else {
-    characters.forEach((person) => {
-      const personFig = document.createElement("figure");
-      const personImg = document.createElement("img");
-      const charNum = extractCharNum(person.url);
-      personImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`;
-      const personCap = document.createElement("figcaption");
-      personCap.textContent = person.name;
-      personFig.appendChild(personImg);
-      personFig.appendChild(personCap);
-      characterDiv.appendChild(personFig);
-    });
-    displayText.textContent = "";
-  }
-}
-
-function extractCharNum(url) {
-  const regex = /\/(\d+)\/$/;
-  return url.match(regex)[1];
-}
-
-populateDOM(people);
+displayPeople(people);
