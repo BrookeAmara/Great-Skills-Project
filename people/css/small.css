@@ -53,15 +53,17 @@ nav button {
 
 #peopleHere figure.female figcaption{
     border: solid 4px pink;
-
+    color: pink;
 }
 
 #peopleHere figure.male figcaption{
     border: solid 4px red;
+    color: red;
 }
 
 #peopleHere figure.other figcaption{
     border: solid 4px blue;
+    color: blue;
 }
 
 
