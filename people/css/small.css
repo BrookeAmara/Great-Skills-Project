@@ -3,3 +3,65 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    font-family: 'Abril Fatface', cursive'
+    font-size: 16px'
+}
+
+header h1 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #efefef;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3230;
+    padding: 1rem 2vw;
+}
+
+nav button {
+    background: rgb(93,150,255);
+    background: linear-gradient(180deg, rgba(93,150,255,1))
+    border: 1px solid black;
+    color: white;
+    padding: .9rem 2rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,5)
+    box-radius: 20px;
+    
+}
+
+#peopleHere {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#peopleHere figure {
+    width: 150px;
+    margin: 1rem 2%;
+    border-radius: 10px;
+}
+
+#peopleHere figure.other {
+    border: #9991px solid;
+    color: #009;
+}
+
+#peopleHere figure.female {
+    border: #900 1px solid;
+    color: #900;
+}
+
+#peopleHere figure img {
+    width: 100%;
+    border-radius: 9px 9px 0 0;
+}
+
+#peopleHere figcaption {
+    text-align: center;
+    padding: .5rem 0;
+}
