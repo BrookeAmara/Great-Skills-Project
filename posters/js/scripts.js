@@ -1,7 +1,7 @@
-import { films } from '../films.js'
+import { films } from '../data/films.js'
 console.log(films)
 
-const pathStart = "https://starwars.dgmuvu.com/films/1.webp"
+const pathStart = "https://starwars.dgmuvu.com/films/"
 const myTarget = document.querySelector(".list");
 for (let x = 0; x < films.length; x++) {
    let barDiv= document.createElement('div')
@@ -9,7 +9,7 @@ for (let x = 0; x < films.length; x++) {
    console.log(pathStart)
   
    let myImage = document.createElement("img")
-   myImage.setAttribute("src", `${pathStart+films[x].episode_id}.jpg`) // CAN'T FIGURE OUT WHAT WORD TO USE
+   myImage.setAttribute("src", `${pathStart+films[x].episode_id}.webp`) // CAN'T FIGURE OUT WHAT WORD TO USE
    myImage.setAttribute("alt", films[x].title)
    
   
