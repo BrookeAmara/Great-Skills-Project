@@ -1,4 +1,7 @@
+
 import{ people } from '../data/people.js'
+console.log(people)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,3 +28,35 @@ import{ people } from '../data/people.js'
   <script src="js/scripts.js" type="module"></script>
 </body>
 </html>
+
+
+const myNavigation = document.querySelector('nav')
+const myParent = document.querySelector('#peopleHere')
+
+function displayPeople (x) {
+
+  x.forEach(person => {
+    const myFigure = document.createElement('figure')
+
+
+    const myImage = document.createElement('img')
+   console.log(person.url)
+   myImage.src="https://starwars.dgmuvu.com/characters/1.jpg"
+
+
+    const myCaption = document.createElement('figcaption')
+    myCaption.textContent = person.name
+
+
+    myFigure.appendChild(myImage)
+    myFigure.appendChild(myCaption)
+
+
+    myParent.appendChild
+
+  }
+
+  )
+}
+
+displayPeople(people);
