@@ -7,8 +7,8 @@ const myParent = document.querySelector('#peopleHere')
 
 //normal button
 const btnAll = document.createElement("button")
-btnAll.textContent = "Show All"
-btnAll.addEventListener("click",() => displayPeople(people))
+btnAll.textContent = "All People"
+btnAll.addEventListener('click',() => displayPeople(people))
 
 
 
@@ -36,7 +36,7 @@ btnOther.addEventListener("click",() => {
   displayPeople(arrayOther)
 })
 
-
+// appending child
 myNavigation.appendChild(btnAll)
 myNavigation.appendChild(btnFemale)
 myNavigation.appendChild(btnMale)
@@ -47,7 +47,7 @@ myNavigation.appendChild(btnOther)
 
 
 function displayPeople(x) {
-  myParent.textContent = ""
+  myParent.innerHTML = ""
 
   x.forEach(person => {
     const myFigure = document.createElement('figure')
