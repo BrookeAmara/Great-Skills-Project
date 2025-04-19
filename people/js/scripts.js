@@ -47,6 +47,7 @@ myNavigation.appendChild(btnOther)
 
 
 function displayPeople(x) {
+  myParent.textContent = ""
 
   x.forEach(person => {
     const myFigure = document.createElement('figure')
