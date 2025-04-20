@@ -1,4 +1,5 @@
-[
+export const senators = [
+
     {
         "id": "A000360",
         "title": "Senator, 2nd Class",

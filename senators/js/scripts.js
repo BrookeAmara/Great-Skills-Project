@@ -1,21 +1,19 @@
-import {allSenators} from 'https://www.govtrack.us/static/legislator-photos/300002-200px.jpeg'
-console.log(allSenators)
+import { senators } from '../data/senators.js'
+console.log(senators)
 
 //establish photograph path
 const photoPath = "https://www.govtrack.us/static/legislator-photos/300002-200px.jpeg"
-const photoSize = "-100px.jpeg"
+const photoSize = "-200px.jpeg"
 
 //grab references to the HTML stuff
-const myNavigation = document.querySelector('nav');
+const myNavigation = document.querySelector('.nav');
 const cardParent = document.querySelector('#allcards');
 
-//Event Listener for ALL senators
-const btnFemale = document.createElement("button")
+//normal button
+const btnAll = document.createElement("button")
 btnAll.textContent = "All Senators"
-btnAll.addEventListener("click",() => {
-  const arrayFemale = people.filter(person => person.gender === 'senators')
-  displayPeople(arrayAll)
-})
+btnAll.addEventListener('click',() => displaySenator(senators)
+)
 
 //Event Listener for Female Senators
 const btnFemale = document.createElement("button")
@@ -26,8 +24,8 @@ btnFemale.addEventListener("click",() => {
 })
 
 //Event Listener for Male Senators
-const btnFemale = document.createElement("button")
-btnMale.textContent = "Females"
+const btnMale = document.createElement("button")
+btnMale.textContent = "Males"
 btnMale.addEventListener("click",() => {
   const arrayFemale = people.filter(person => person.gender === 'male')
   displayPeople(arrayMale)
@@ -44,21 +42,23 @@ myNavigation.appendChild(btnMale)
 //append the female, male, other buttons
 
 
-function displayPeople(x) {
+function displaySenator(x) {
   myParent.innerHTML = ""
 
-  x.forEach(person => {
+  x.forEach(senator => {
     const myFigure = document.createElement('figure')
 
 
     const myImage = document.createElement('img')
-    //console.log(person.url)
-    const explodedArray = person.url.split('/')
+    //console.log(senator.url)
+    const explodedArray = senator.url.split('/')
     //console.log(explodedArray)
     const charNumber = explodedArray[5]
-    myImage.src = `https://starwars.dgmuvu.com/characters/${charNumber}.jpg`
+    myImage.src = `https://www.govtrack.us/static/legislator-photos/${charNumber}.jpeg`
     myImage.alt = person.name
 
+
+    //example link https://starwars.dgmuvu.com/characters/${charNumber}.jpg
 
     const myCaption = document.createElement('figcaption')
     myCaption.textContent = person.name
@@ -93,4 +93,4 @@ function displayPeople(x) {
   )
 }
 
-displayPeople(people);
+displayPeople(senators);
