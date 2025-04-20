@@ -7,7 +7,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 body {
     /* font */
     /* background image */
-    background-image: url(/image/fun.jpg);
+    background-image: url(/ships/image/fun.jpg);
     background-size: cover;
     font-family: 'Overpass', sans-serif;
 }

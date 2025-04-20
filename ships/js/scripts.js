@@ -41,12 +41,13 @@ console.log(shipData)
     console.log(shipData.url)
     let urlArray = shipData.url.split('/')
     console.log(urlArray[5])
-    myImage.src=`https://starwars-visualguide.com/assets/img/starships/${urlArray[5]}.jpg`
+    myImage.src=`https://starwars.dgmuvu.com/ships/${urlArray[5]}.jpg`
+
     myCaption.textContent = shipData.name
 
     //error checking for image
     myImage.addEventListener('error', () => {
-        myImage.src = "https://starwars-visualguide.com/assets/img/big-placeholder.jpg"
+        myImage.src = "https://starwars.dgmuvu.com/ships/placeholder.jpg"
         myCaption.textContent = `${shipData.name} was destroyed in a recent battle`
     })
 
