@@ -12,23 +12,23 @@ const cardParent = document.querySelector('#allcards');
 //normal button
 const btnAll = document.createElement("button")
 btnAll.textContent = "All Senators"
-btnAll.addEventListener('click',() => displaySenator(senators)
+btnAll.addEventListener('click',() => displaySenators(senator)
 )
 
 //Event Listener for Female Senators
 const btnFemale = document.createElement("button")
 btnFemale.textContent = "Females"
 btnFemale.addEventListener("click",() => {
-  const arrayFemale = people.filter(person => person.gender === 'female')
-  displayPeople(arrayFemale)
+  const arrayFemale = senator.filter(senator => senator.gender === 'female')
+  displaySenator(arrayFemale)
 })
 
 //Event Listener for Male Senators
 const btnMale = document.createElement("button")
 btnMale.textContent = "Males"
 btnMale.addEventListener("click",() => {
-  const arrayFemale = people.filter(person => person.gender === 'male')
-  displayPeople(arrayMale)
+  const arrayFemale = senator.filter(senator => senator.gender === 'male')
+  displaySenator(arrayMale)
 })
 
 
@@ -41,9 +41,10 @@ myNavigation.appendChild(btnMale)
 
 //append the female, male, other buttons
 
-
 function displaySenator(x) {
-  myParent.innerHTML = ""
+  cardParent.innerHTML = ""
+  cardParent.appendChild(myFigure)
+}
 
   x.forEach(senator => {
     const myFigure = document.createElement('figure')
@@ -54,19 +55,18 @@ function displaySenator(x) {
     const explodedArray = senator.url.split('/')
     //console.log(explodedArray)
     const charNumber = explodedArray[5]
-    myImage.src = `https://www.govtrack.us/static/legislator-photos/${charNumber}.jpeg`
-    myImage.alt = person.name
+    myImage.src = `https://www.govtrack.us/static/legislator-photos/${charNumber}.jpg`
+    myImage.alt = senator.name
 
 
-    //example link https://starwars.dgmuvu.com/characters/${charNumber}.jpg
 
     const myCaption = document.createElement('figcaption')
-    myCaption.textContent = person.name
+    myCaption.textContent = senator.name
 
 
     // assign gender class
-    console.log(person.gender)
-    switch (person.gender) {
+    console.log(senator.gender)
+    switch (senator.gender) {
       case "female":
 
         myFigure.className = "female"
@@ -91,6 +91,6 @@ function displaySenator(x) {
   }
 
   )
-}
 
-displayPeople(senators);
+
+displaySenator(senators);
