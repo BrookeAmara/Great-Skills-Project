@@ -1,4 +1,4 @@
-export const senators = [
+export const allSenators = [
 
     {
         "id": "A000360",
