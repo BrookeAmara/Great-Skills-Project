@@ -1,96 +1,72 @@
-import { senators } from '../data/senators.js'
-console.log(senators)
+import { senators } from '../data/senators.js';
+console.log(senators);
 
-//establish photograph path
-const photoPath = "https://www.govtrack.us/static/legislator-photos/300002-200px.jpeg"
-const photoSize = "-200px.jpeg"
-
-//grab references to the HTML stuff
+// HTML element references
 const myNavigation = document.querySelector('.nav');
 const cardParent = document.querySelector('#allcards');
 
-//normal button
-const btnAll = document.createElement("button")
-btnAll.textContent = "All Senators"
-btnAll.addEventListener('click',() => displaySenators(senator)
-)
+// Button: All Senators
+const btnAll = document.createElement("button");
+btnAll.textContent = "All Senators";
+btnAll.addEventListener('click', () => displaySenator(senators));
 
-//Event Listener for Female Senators
-const btnFemale = document.createElement("button")
-btnFemale.textContent = "Females"
-btnFemale.addEventListener("click",() => {
-  const arrayFemale = senator.filter(senator => senator.gender === 'female')
-  displaySenator(arrayFemale)
-})
+// Button: Female Senators
+const btnFemale = document.createElement("button");
+btnFemale.textContent = "Females";
+btnFemale.addEventListener("click", () => {
+  const arrayFemale = senators.filter(senator => senator.gender === 'female');
+  displaySenator(arrayFemale);
+});
 
-//Event Listener for Male Senators
-const btnMale = document.createElement("button")
-btnMale.textContent = "Males"
-btnMale.addEventListener("click",() => {
-  const arrayFemale = senator.filter(senator => senator.gender === 'male')
-  displaySenator(arrayMale)
-})
+// Button: Male Senators
+const btnMale = document.createElement("button");
+btnMale.textContent = "Males";
+btnMale.addEventListener("click", () => {
+  const arrayMale = senators.filter(senator => senator.gender === 'male');
+  displaySenator(arrayMale);
+});
 
+// Add buttons to the navigation
+myNavigation.appendChild(btnAll);
+myNavigation.appendChild(btnFemale);
+myNavigation.appendChild(btnMale);
 
-  // appending child
-myNavigation.appendChild(btnAll)
-myNavigation.appendChild(btnFemale)
-myNavigation.appendChild(btnMale)
+// Function to display senators
+function displaySenator(senatorArray) {
+  cardParent.innerHTML = ""; // Clear current cards
 
+  senatorArray.forEach(senator => {
+    const myFigure = document.createElement('figure');
 
+    // Create Image
+    const explodedArray = senator.url.split('/');
+    const charNumber = explodedArray[5];
+    const myImage = document.createElement('img');
+    myImage.src = `https://www.govtrack.us/static/legislator-photos/${charNumber}-200px.jpeg`;
+    myImage.alt = senator.name;
 
-//append the female, male, other buttons
+    // Create Caption
+    const myCaption = document.createElement('figcaption');
+    myCaption.textContent = senator.name;
 
-function displaySenator(x) {
-  cardParent.innerHTML = ""
-  cardParent.appendChild(myFigure)
-}
-
-  x.forEach(senator => {
-    const myFigure = document.createElement('figure')
-
-
-    const myImage = document.createElement('img')
-    //console.log(senator.url)
-    const explodedArray = senator.url.split('/')
-    //console.log(explodedArray)
-    const charNumber = explodedArray[5]
-    myImage.src = `https://www.govtrack.us/static/legislator-photos/${charNumber}.jpg`
-    myImage.alt = senator.name
-
-
-
-    const myCaption = document.createElement('figcaption')
-    myCaption.textContent = senator.name
-
-
-    // assign gender class
-    console.log(senator.gender)
+    // Gender class
     switch (senator.gender) {
       case "female":
-
-        myFigure.className = "female"
+        myFigure.className = "female";
         break;
       case "male":
-        myFigure.className = "male"
+        myFigure.className = "male";
         break;
       default:
-        myFigure.className = "other"
+        myFigure.className = "other";
+    }
 
-    } //end of switch
+    // Assemble figure
+    myFigure.appendChild(myImage);
+    myFigure.appendChild(myCaption);
+    cardParent.appendChild(myFigure);
+  });
+}
 
-
-
-    // assemble the parts 
-    myFigure.appendChild(myImage)
-    myFigure.appendChild(myCaption)
-
-
-    myParent.appendChild(myFigure)
-
-  }
-
-  )
-
-
+// Display all on page load
 displaySenator(senators);
