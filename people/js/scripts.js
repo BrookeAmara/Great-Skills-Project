@@ -43,7 +43,7 @@ myNavigation.appendChild(btnMale)
 myNavigation.appendChild(btnOther)
 
 
-//append the female, male, other buttons
+
 
 
 function displayPeople(x) {
