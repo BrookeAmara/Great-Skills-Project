@@ -1,0 +1,89 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  /* Apply a natural box layout model to all elements */
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Dongle', sans-serif;
+    background-color: #fffcfd; /* light pink background */
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  header {
+    font-weight: 700;
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffb6c1; 
+    color: #333;
+    text-align: center;
+  }
+
+  header span:nth-child(2) {
+    padding: .5rem;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: -10px;
+  }
+  
+  #town {
+    padding: 0.5rem;
+  }
+  
+  aside {
+    display: none;
+  }
+  
+  aside.show {
+    display: block;
+    position: absolute;
+    top: 49px;
+    height: 400px;
+    left: 10px;
+    right: 10px;
+    padding: 1rem 2vw;
+    border-radius: 20px;
+    background-color: pink;
+    color: black;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+
+  }
+
+  aside p {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+  }
+  footer {
+    background-color: pink;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+width: 100%;
+padding: 1rem;
+font-size: .9rem;
+font-weight: 500;
+  }
+  
