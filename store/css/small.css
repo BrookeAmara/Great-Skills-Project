@@ -24,6 +24,7 @@ header {
 }
 h1 {
     font-weight: 400;
+
 }
 button {
     background-color: #F5CAC3;
@@ -52,6 +53,15 @@ nav {
     text-align: center;
     padding: 3px;
     color: black;
+    flex-wrap: wrap;
+
+nav button {
+    background-color: pink;
+    margin: .5rem 1%;
+    padding: 1rem 0;
+    border: 1px black;
+    border-radius: 10px;
+}
     
 }
 div#viewer{
@@ -60,13 +70,16 @@ div#viewer{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+
 h2 {
 margin-top: 1px;
 }
+
+
 section {
    border-radius: 10px;
     text-align: center;
-  /*  padding-left: 50px;*/
     padding:20px;
     margin: 30px;
     background-color: #C5E6E8;
