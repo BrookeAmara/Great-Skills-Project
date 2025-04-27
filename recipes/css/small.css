@@ -1,104 +1,113 @@
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
-/*  apply a natural box layout model to all elements  */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/* Apply a natural box layout model to all elements */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-width: 100%;
-background-color: #F7EDE2;
-font-family: 'Righteous', cursive;
+  width: 100%;
+  background-color: #fff8f5; /* soft off-white */
+  font-family: 'Quicksand', sans-serif; /* Cozy, modern font */
+  color: #5c4033; /* cozy brown text */
+  margin: 0;
 }
 
 header {
-    background-image: white;
-    object-fit:fill;
-    width: 100%;
-    height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    text-align: center;
-    color: black;
-    padding-top: 5px;
-}
-h1 {
-    font-weight: 400;
-
-}
-button {
-    background-color: #F5CAC3;
-    text-align: center;
-    border-style: none;
-    margin: 5px;
-    padding: 10px;
-   color: black;
-}
-button:hover {
-    background-color: #F9D79F;
-}
-p {
+  background-color: #f5cac3; /* cozy pink background */
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 20px;
 }
+
 h1 {
-    padding: 10px;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #cb2005; /* cozy red */
+  margin: 0;
 }
+
 nav {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-    background-color: #F5CAC3;
-    text-align: center;
-    padding: 3px;
-    color: black;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #e96a6a; /* pale pink */
+  padding: 1rem;
+  gap: 10px;
+}
 
 nav button {
-    background-color: pink;
-    margin: .5rem 1%;
-    padding: 1rem 0;
-    border: 1px black;
-    border-radius: 10px;
-}
-    
-}
-div#viewer{
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  background-color: #cb2005; /* deep cozy red */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-h2 {
-margin-top: 1px;
+nav button:hover {
+  background-color: #f0f6c0d38080; /* soft red when hovering */
+  transform: scale(1.05);
 }
 
+#viewer {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
 
 section {
-   border-radius: 10px;
-    text-align: center;
-    padding:20px;
-    margin: 30px;
-    background-color: #C5E6E8;
-   
+  background-color: #f6c0d3; /* soft mint (ties in olivey tones) */
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: #cb2005;
+}
+
 img {
-    width: 300px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 1rem;
 }
+
+p {
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+}
+
 li::marker {
-    content: "\273F"; /*\2740 273F*/
+  content: "\273F"; /* Cute star */
 }
 
 footer {
-    background-color: #AEC596;
-    position: absolute;
-    bottom: -780px;
-    width: 100%;
-    padding: 5px;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
+  background-color: #e96a6a; /* olive green */
+  color: #fff8f5;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }

@@ -36,7 +36,7 @@ function showRecipes(recipes) {
     recipesPrice.textContent = `Price: ${recipes.price}`
     recipesDescription.textContent = `Description: ${recipes.description}`
     recipesIngredients.textContent = `Ingredients: ${recipes.ingredients}`
-    recipesDirections.textContent = `Directions: ${recipes.recipesdirections}`
+    recipesDirections.textContent = `Directions: ${recipes.directions}`
 
    /* recipes.colors.forEach(grown => {
         console.log(grown)

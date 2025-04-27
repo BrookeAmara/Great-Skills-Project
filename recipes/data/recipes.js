@@ -3,7 +3,7 @@ export const recipes = [
   //CHOCO COOKIES
 {
     "title": "Chocolate Chip Cookies",
-    "photo": "images/chocolate-chip.png",
+    "photo": "images/chocolatechip.png",
     "price": "$4.68",
     "description": "A warm, gooey chocolate chip cookie with crisp golden edges and melty chocolate chunks in every bite.",
     "ingredients": [
@@ -26,7 +26,7 @@ export const recipes = [
   //CINNAMON ROLLS
   {
     "title": "Cinnamon Rolls",
-    "photo": "images/cinnamon-rolls.png",
+    "photo": "images/cinnamonrolls.png",
     "price": "$4.99",
     "description": "Soft and sweet rolls filled with cinnamon sugar and topped with a creamy glaze — the ultimate cozy morning treat.",
     "Ingredients": [
@@ -48,7 +48,7 @@ export const recipes = [
     //BANANA BREAD
   {
     "title": "Banana Bread",
-    "photo": "images/banana-bread.png",
+    "photo": "images/bananabread.png",
     "price": "$2.23",
     "description": "Moist and delicious banana bread, packed with ripe bananas and a hint of vanilla, perfect with a warm drink.",
     "ingredients": [
@@ -69,7 +69,7 @@ export const recipes = [
     //PUMPKIN MUFFINS
   {
     "title": "Pumpkin Muffins",
-    "photo": "images/pumpkin-muffins.png",
+    "photo": "images/pumpkinmuffins.png",
     "price": "$3.15",
     "description": "Fluffy muffins filled with warm pumpkin spice flavor — a fall favorite that's great year-round.",
     "ingredients": [
@@ -89,7 +89,7 @@ export const recipes = [
     //APPLE PIE
   {
     "title": "Apple Pie",
-    "photo": "images/apple-pie.png",
+    "photo": "images/applepie.png",
     "price": "$2.50",
     "description": "Classic apple pie with a flaky crust and perfectly spiced apple filling — tastes like home.",
     "ingredients": [
@@ -106,5 +106,28 @@ export const recipes = [
       "Cover with second crust.",
       "Bake at 375°F for 50."
     ]
-  }
+  },
+
+      //SNICKERDOODLE
+      {
+        "title": "Snickerdoodle",
+        "photo": "images/snickerdoodle.png",
+        "price": "$1.90",
+        "description": "Everyone's favorite cinnamon and sugar goodness all in one cookie.",
+        "ingredients": [
+          "1 cup flower",
+          "1/2 cup sugar",
+          "1 tsp cinnamon",
+          "1/2 tsp baking powder",
+          "1 egg"
+        ],
+        "directions": [
+          "Mix all dry ingredients.",
+          "Mix with sugar and cinnamon.",
+          "Place in oven.",
+          "Take out and let cool.",
+          "Enjoy."
+        ]
+      }
+
 ]
