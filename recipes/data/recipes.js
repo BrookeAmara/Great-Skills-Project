@@ -111,7 +111,7 @@ export const recipes = [
       //SNICKERDOODLE
       {
         "title": "Snickerdoodle",
-        "photo": "images/snickerdoodle.png",
+        "photo": "images/snickerdoodles.png",
         "price": "$1.90",
         "description": "Everyone's favorite cinnamon and sugar goodness all in one cookie.",
         "ingredients": [
